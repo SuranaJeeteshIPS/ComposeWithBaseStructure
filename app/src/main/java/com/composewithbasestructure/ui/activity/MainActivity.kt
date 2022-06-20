@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.lifecycleScope
+import com.composewithbasestructure.core.uI.BaseActivity
 import com.composewithbasestructure.ui.theme.ComposeWithBaseStructureTheme
 import com.composewithbasestructure.viewmodel.DemoViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -19,7 +20,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class MainActivity : ComponentActivity() {
+class MainActivity : BaseActivity() {
+
     private val homeViewModel: DemoViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
