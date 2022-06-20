@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit
 
 interface ApiRestService {
 
-    @GET("products")
+    @GET("posts")
     suspend fun getWeather(): Response<PostResponse>
 
 
