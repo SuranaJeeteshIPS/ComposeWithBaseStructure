@@ -50,9 +50,9 @@ interface ApiRestService {
             }
 
             val okHttpBuilder = OkHttpClient.Builder()
-                .connectTimeout(60, TimeUnit.SECONDS)
-                .readTimeout(10, TimeUnit.SECONDS)
-                .writeTimeout(10, TimeUnit.SECONDS)
+                .connectTimeout(2, TimeUnit.MINUTES)
+                .readTimeout(1, TimeUnit.MINUTES)
+                .writeTimeout(1, TimeUnit.MINUTES)
                 .cache(provideCache())
                 .addInterceptor(networkInterceptor)
                 .addInterceptor(logging)

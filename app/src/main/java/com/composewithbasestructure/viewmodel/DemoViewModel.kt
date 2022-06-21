@@ -24,7 +24,7 @@ class DemoViewModel @Inject constructor(
             val data = repository.getWeather()
             Log.e("TAG", "getData() data--> $data")
         } catch (e: ApiException) {
-            e.message
+            e.printStackTrace()
         }
     }
 }
